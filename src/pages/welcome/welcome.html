@@ -1,0 +1,42 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Welcome</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1 text-center> <!-- Built-in directive -->
+    Welcome to the StarShoftware Technical Test APP!
+  </h1>
+
+  <p>
+    My name is 
+    <span appIncreaseTextFont>{{ developerName }}</span> <!-- Custom directive -->
+    and today is 
+    <span *ngIf="!showBinaryDate" (click)="onDateClick()">{{ currentDate | date: 'yyyy-MM-dd' }}</span> <!-- Built-in pipe -->
+    <span *ngIf="showBinaryDate" (click)="onDateClick()">{{ currentDate | convertNumberToBinary }}</span> <!-- Custom pipe -->
+  </p>
+  <p>
+    <span class="text-bold">Tip 1:</span> Click on my name
+  </p>
+  <p>
+    <span class="text-bold">Tip 2:</span> 
+    <span *ngIf="showBinaryDate">Weird date? Just converted to binary.</span>
+    <span *ngIf="!showBinaryDate">This date seems to be the right one!</span> 
+    Click on the date to toggle the number base of the date.
+  </p>
+
+</ion-content>
