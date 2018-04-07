@@ -8,6 +8,12 @@
 
 ## Android APK Download
 
+[Download link](https://github.com/Dellos7/starshotsoftware-test-app/blob/master/releases/android/StarshoftSoftwareIonicTestApp.apk?raw=true)
+
+or
+
+<img src="github/apk_download_qr.jpg" alt="Apk QR download" style="width: 200px;"/>
+
 ## Additional Questions
 
 1. **If instead to get the mock data from arrays in the application, we have an external API, which method would do you recommend for this case (websockets or http requests) ? Could you tell me why did you choose it and in which case is better use one or another?**
