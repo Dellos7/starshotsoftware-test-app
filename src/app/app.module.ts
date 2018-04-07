@@ -1,3 +1,4 @@
+import { DirectivesModule } from './../directives/directives.module';
 import { FormBuilder } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
