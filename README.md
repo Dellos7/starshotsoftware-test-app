@@ -30,12 +30,14 @@ The great part of the *difficulties* that I've found while building the app have
 
 I also faced little issues in order to update the timeout of the observable and validating at the same time the form because there is a bug in angular that does not update the form validation immediately when using the `(ngModelChange)` directive and I had to figure out what was happening.
 
+Then, I started doing the optional part of the application (storing the data of the chart in a local SQLite database). I started using the native ionic plugin in order to set up the database and perform SQL queries in order to retrieve the data, but then I realized that this kind of native plugins don't work in the browser. As I wanted to deploy the app as a webapp and be able to run it through the browser, I quit this plugin and the code and then used the [Ionic Storage](https://ionicframework.com/docs/storage/) plugin. This plugin allows to store JSON data in DB, both in browser and devices. It's also possible to configure priorize SQLite as DB if available.
+
 3. **What do you think we could improve in the app? (feel free to explain whatever you want, this question is to know more about your thought).**
 
 For instance, in the welcome page of the app, it says that I have to use 1 directive and at least 1 pipe at my choice. In my opinion it's not clear if we have to just use them (I mean, use the built-in pipes of angular or the ones from ionic) or create them and then use them. If we have to just use them, and not create our own ones, the time spent developing the app is less.
 
 4. **How much time did you spend doing the test? How long do you think the test is intended to be done?**
 
-I think that I finally spent between about 5 hours since I created the project until I uploaded the app to the Firebase hosting and built the apk. But I added some additional stuff in the chart page and I tried to polish all the features, put comments in the code, etc. I mean, I think that I could have done it in less time, achieving the minimal features, but worst done.
+I think that I finally spent between about 7 hours since I created the project until I uploaded the app to the Firebase hosting and built the apk. But I added some additional stuff in the chart page and I tried to polish all the features, put comments in the code, made the optional part of the test, etc. I mean, I think that I could have done it in less time, achieving the minimal features, but worst done.
 
-About the intended time to do the test, perhaps if I had ever used a chart library, if I dind't have created my own pipes/directives, dind't have put the refresh countdown, etc. I could have done it in 2-3 hours or so.
+About the intended time to do the test, perhaps if I had ever used a chart library, if I dind't have created my own pipes/directives, dind't have put the refresh countdown, didn't have done the optional part, I could have done it in 2-3 hours or so

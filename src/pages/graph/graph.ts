@@ -52,7 +52,7 @@ export class GraphPage {
     //this.updateGraph(this.refreshTimeoutSeconds);
   }
 
-  addInputValidation() { 
+  addInputValidation() {
     this.form = this.formBuilder.group({
       timeout: ['', Validators.compose([Validators.required, Validators.pattern('^\\d+$'), Validators.min(1)])]
     });
@@ -95,6 +95,9 @@ export class GraphPage {
 
     //Subscribe to the service observable which will trigger data each refreshTimeout seconds
     this.observableSubs = this.chartSvc.retrieveGraphData(refreshTimeout * 1000).subscribe((res) => {
+      if( !res ) {
+        return;
+      }
       //Parse data to string in order to show in the view
       this.chartDataLog = JSON.stringify(res);
       //Get the data and labels from the svc separated

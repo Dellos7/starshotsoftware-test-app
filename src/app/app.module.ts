@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ChartDataProvider } from '../providers/chart-data/chart-data';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,10 @@ import { ChartDataProvider } from '../providers/chart-data/chart-data';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot({
+      name: '__sss-test-app',
+         driverOrder: ['sqlite','indexeddb', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,7 +31,6 @@ import { ChartDataProvider } from '../providers/chart-data/chart-data';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ChartDataProvider,
     FormBuilder
   ]
 })
