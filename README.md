@@ -12,7 +12,7 @@
 
 or
 
-<img src="github/apk_download_qr.jpg" alt="Apk QR download" style="width: 200px;"/>
+<img src="github/apk_download_qr.jpg" alt="Apk QR download" width="200"/>
 
 ## Additional Questions
 
